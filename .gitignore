@@ -1,0 +1,7 @@
+.vscode/
+firmware/.settings/
+firmware/Debug/
+firmware/Release/
+firmware/weaver.launch
+gui/build/
+gui/CMakeLists.txt.user

@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/weaver">
+        <file>icons/weaver.svg</file>
+        <file>win32/weaver_gui.ico</file>
+        <file>html/about.html</file>
+        <file>icons/qt_logo.png</file>
+        <file>icons/exit.png</file>
+        <file>icons/error.png</file>
+        <file>icons/info.png</file>
+        <file>icons/tick.png</file>
+        <file>icons/warning.png</file>
+        <file>icons/system-monitor.png</file>
+        <file>icons/wi-fi.png</file>
+        <file>icons/wrench-arrow.png</file>
+        <file>icons/plug-connect.png</file>
+        <file>icons/plug-disconnect.png</file>
+        <file>icons/plug-plus.png</file>
+        <file>icons/wrench.png</file>
+        <file>icons/broom.png</file>
+    </qresource>
+</RCC>

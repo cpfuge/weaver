@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Weaver GUI</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="weaver_gui.qrc">
+    <normaloff>:/weaver/icons/weaver.svg</normaloff>:/weaver/icons/weaver.svg</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="deviceLayout">
+      <item>
+       <widget class="QGroupBox" name="gbxConnection">
+        <property name="title">
+         <string>Connection</string>
+        </property>
+        <layout class="QFormLayout" name="connectionLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="lblSerialPort">
+           <property name="text">
+            <string>Serial Port</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="cbxSerialPort">
+           <property name="minimumSize">
+            <size>
+             <width>120</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="lblBaudRate">
+           <property name="text">
+            <string>Baud Rate</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="cbxBaudRate">
+           <property name="minimumSize">
+            <size>
+             <width>120</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="lblParity">
+           <property name="text">
+            <string>Parity</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="cbxParity">
+           <property name="minimumSize">
+            <size>
+             <width>120</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="lblDataBits">
+           <property name="text">
+            <string>Data Bits</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QComboBox" name="cbxDataBits">
+           <property name="minimumSize">
+            <size>
+             <width>120</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="lblStopBits">
+           <property name="text">
+            <string>Stop Bits</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QComboBox" name="cbxStopBits">
+           <property name="minimumSize">
+            <size>
+             <width>120</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="lblFlowControl">
+           <property name="text">
+            <string>Flow Control</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QComboBox" name="cbxFlowControl">
+           <property name="minimumSize">
+            <size>
+             <width>120</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="gbxConfiguration">
+        <property name="title">
+         <string>Configuration</string>
+        </property>
+        <layout class="QFormLayout" name="wifiConfigLayout">
+         <item row="1" column="0">
+          <widget class="QLabel" name="lblWiFiNetwork">
+           <property name="text">
+            <string>WiFi SSID</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="editWiFiNetwork"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="lblWiFiPassword">
+           <property name="text">
+            <string>WiFi Password</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="editWiFiPassword"/>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="editMqttIpAddress"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="lblMqttIpAddress">
+           <property name="text">
+            <string>MQTT IP Address</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="lblMqttPort">
+           <property name="text">
+            <string>MQTT Port</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="editMqttPort"/>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="lblMqttToken">
+           <property name="text">
+            <string>MQTT Token</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="editMqttToken"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="lblWiFiStatus">
+           <property name="text">
+            <string>WiFi Status</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="editWiFiStatus">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="gbxSensors">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>Sensors</string>
+        </property>
+        <layout class="QFormLayout" name="sensorsLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="lblTemperature">
+           <property name="text">
+            <string>Temperature</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="editTemperature">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="lblHumidity">
+           <property name="text">
+            <string>Humidity</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="editHumidity">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="lblPressure">
+           <property name="text">
+            <string>Pressure</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="editPressure">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="lblTVoc">
+           <property name="text">
+            <string>tVOC</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="editTVoc">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="lblECo2">
+           <property name="text">
+            <string>eCO2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="editECo2">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QListWidget" name="logView">
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="buttonsLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>398</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnReadSensors">
+        <property name="text">
+         <string>Read Sensors</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnReadConfiguration">
+        <property name="text">
+         <string>Read Configuration</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnConfigureDevice">
+        <property name="text">
+         <string>Configure</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnToggleConnection">
+        <property name="text">
+         <string>Connect</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnExit">
+        <property name="text">
+         <string>Exit</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>750</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAboutQt"/>
+    <addaction name="actionAboutApplication"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExitApplication"/>
+   </widget>
+   <widget class="QMenu" name="menuDevice">
+    <property name="title">
+     <string>Device</string>
+    </property>
+    <addaction name="actionToggleConnection"/>
+    <addaction name="separator"/>
+    <addaction name="actionReadSensors"/>
+    <addaction name="actionReadConfiguration"/>
+    <addaction name="actionSendConfiguration"/>
+    <addaction name="separator"/>
+    <addaction name="actionLoadSerialPorts"/>
+    <addaction name="separator"/>
+    <addaction name="actionClearLogs"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuDevice"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionExitApplication">
+   <property name="icon">
+    <iconset resource="weaver_gui.qrc">
+     <normaloff>:/weaver/icons/exit.png</normaloff>:/weaver/icons/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAboutQt">
+   <property name="icon">
+    <iconset resource="weaver_gui.qrc">
+     <normaloff>:/weaver/icons/qt_logo.png</normaloff>:/weaver/icons/qt_logo.png</iconset>
+   </property>
+   <property name="text">
+    <string>About Qt</string>
+   </property>
+  </action>
+  <action name="actionAboutApplication">
+   <property name="icon">
+    <iconset resource="weaver_gui.qrc">
+     <normaloff>:/weaver/icons/weaver.svg</normaloff>:/weaver/icons/weaver.svg</iconset>
+   </property>
+   <property name="text">
+    <string>About Weaver GUI</string>
+   </property>
+  </action>
+  <action name="actionToggleConnection">
+   <property name="icon">
+    <iconset resource="weaver_gui.qrc">
+     <normaloff>:/weaver/icons/plug-connect.png</normaloff>:/weaver/icons/plug-connect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Connect</string>
+   </property>
+   <property name="shortcut">
+    <string>F4</string>
+   </property>
+  </action>
+  <action name="actionReadSensors">
+   <property name="icon">
+    <iconset resource="weaver_gui.qrc">
+     <normaloff>:/weaver/icons/system-monitor.png</normaloff>:/weaver/icons/system-monitor.png</iconset>
+   </property>
+   <property name="text">
+    <string>Read Sensors</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actionReadConfiguration">
+   <property name="icon">
+    <iconset resource="weaver_gui.qrc">
+     <normaloff>:/weaver/icons/wrench.png</normaloff>:/weaver/icons/wrench.png</iconset>
+   </property>
+   <property name="text">
+    <string>Read Configuration</string>
+   </property>
+   <property name="shortcut">
+    <string>F6</string>
+   </property>
+  </action>
+  <action name="actionSendConfiguration">
+   <property name="icon">
+    <iconset resource="weaver_gui.qrc">
+     <normaloff>:/weaver/icons/wrench-arrow.png</normaloff>:/weaver/icons/wrench-arrow.png</iconset>
+   </property>
+   <property name="text">
+    <string>Send Configuration</string>
+   </property>
+   <property name="shortcut">
+    <string>F10</string>
+   </property>
+  </action>
+  <action name="actionLoadSerialPorts">
+   <property name="icon">
+    <iconset resource="weaver_gui.qrc">
+     <normaloff>:/weaver/icons/plug-plus.png</normaloff>:/weaver/icons/plug-plus.png</iconset>
+   </property>
+   <property name="text">
+    <string>Read Serial Ports</string>
+   </property>
+   <property name="shortcut">
+    <string>F3</string>
+   </property>
+  </action>
+  <action name="actionClearLogs">
+   <property name="icon">
+    <iconset resource="weaver_gui.qrc">
+     <normaloff>:/weaver/icons/broom.png</normaloff>:/weaver/icons/broom.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear Logs</string>
+   </property>
+   <property name="toolTip">
+    <string>Clear Logs</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+X</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="weaver_gui.qrc"/>
+  <include location="weaver_gui.qrc"/>
+ </resources>
+ <connections/>
+</ui>
